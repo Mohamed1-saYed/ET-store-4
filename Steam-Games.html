@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="STEAM GAMES">
+ <meta name="keywords" content="Ebrahim thabet,STEAM GAMES">
+ <meta name="keywords" content="Ebrahim thabet,GTA,Red Dead Redemption 2,STEAM GAMES">
+ <meta name="robots" content="index,follow">
+ <meta name="og:description" content="Ebrahim thabet Online Store,STEAM GAMES">
+ <meta name="og:keywords" content="Online Games Store,Ebrahim thabet,STEAM GAMES">
+ <meta name="og:url" content="">
+ <meta name="og:image" content="">
+ <meta name="og:title" content="E-T store">
+ <title>ET store-Steam Games</title>
+ <!-- favicon -->
+  <link rel="icon" href="images/fav-icon.png">
+ <!-- css-files -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="Steam-Games.css">
+ <!-- Font-Awesome-CDN -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- fonts-google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- loader -->
+  <div class="loaderDiv" id="loaderDiv2"> <span id="loader2" class="loader">Load&nbsp;ng</span></div> 
+ <!-- ToUp --> 
+  <button id="ToUp"><i class="fa-solid fa-arrow-up"></i></button> 
+ <!-- start-nav -->
+  <nav id="nav">
+   <h1><span>ET</span> Store <span class="sp-2"><img src="images/controller .png" alt="Logo"></span></h1> 
+   <div class="right-container">
+    <button id="btnCart" onclick="ShowCart()" href="#"><i class="fa-solid fa-cart-shopping"></i> <span id="Cart">0</span></button>
+    <!-- start-cart -->
+    <span id="spCounter">0</span>
+     <div id="CartContainer">
+       <div id="AppendProduct">
+
+       </div>
+      <button onclick="CloseCart()" id="CloseCart"><i class="fa-solid fa-xmark"></i></button>    
+    <!-- PurchaseInformation -->
+    <div class="PurchaseInformation">
+      <p class="pTop">Select Payment Method:</p> 
+      <div class="Payment-Gateway">
+       <div class="top-container">
+          <!-- Payment-Gateway-1 -->   
+       <div class="Payment-Gateway-1">
+        <a href="#" target="_self"><i class="fa-solid fa-wallet"></i> <span>Vodafone Cash</span></a>
+       </div>
+       <!-- Payment-Gateway-2 -->   
+       <div class="Payment-Gateway-2">
+        <a href="#" target="_self"><img src="images/INSTAPAY.png" alt="Payment-Gateway-2"> <span>Insta Pay</span></a>
+       </div>
+       </div>
+      </div>
+      <div class="Help-To-Pay">
+       <div class="translate-box">
+        <button id="translateBtn1"><i class="fa-solid fa-language"></i></button>
+        <button id="translateBtn2"><i class="fa-solid fa-language"></i></button>
+        <br>
+        <span id="languages">ترجمة</span>
+       </div> 
+       <h3>How to get your Order ?</h3>
+       <p class="advice">This order type must be manually entered into your account.</p> 
+       <div class="steps">
+        <!-- step-1 -->
+        <div class="step-1 stip">
+         <p class="p-1"><span class="sp1">1</span> Check your Shopping Cart. <span class="sp-2"><i class="fa-solid fa-chevron-down"></i></span></p> 
+         <p class="p-2">Edit and add or remove items from your cart then pay for it.</p> 
+        </div>
+        <!-- step-2 -->
+        <div class="step-2 stip">
+         <p class="p-1"><span class="sp1">2</span> Contact Us <span class="sp-2"><i class="fa-solid fa-chevron-down"></i></span></p> 
+         <p class="p-2">After you contact us we will ask you to send your account information.</p> 
+        </div>
+        <!-- step-3 -->
+        <div class="step-3 stip">
+         <p class="p-1"><span class="sp1">3</span> Order Delivery. <span class="sp-2"><i class="fa-solid fa-chevron-down"></i></span></p> 
+         <p class="p-2">We will send you a screenshot showing it before and after the order has been shipped.</p> 
+        </div>
+       </div>
+      </div>  
+     </div> 
+    </div>
+    <!-- end-cart -->   
+    <button id="btnNav"><i class="fa-solid fa-bars"></i></button>
+    <div id="asidewishlist">
+     <button onclick="CloseWishlist()" id="Closewishlist"><i class="fa-solid fa-xmark"></i></button>   
+    </div> 
+  </div>  
+   <!-- menu -->
+   <div id="Menu" class="menu">
+     <button id="btnMenue"><i class="fa-solid fa-xmark"></i></button>  
+    <ul class="ul-1">
+     <li><a target="_blank" href="index.html">Home</a></li>   
+     <li><a target="_self" href="#AboutSection">About</a></li>
+     <li onclick="ClickMenue1()">Games <span id="sp1"><i class="fa-solid fa-chevron-down"></i></span></li>   
+     <ul class="ul-2" id="ul2">
+      <li><a target="_self" href="Steam-Games.html">Steam Games</a></li>
+      <li><a target="_self" href="Steam-Wallet.html">Steam Wallet Codes</a></li>
+      <li><a target="_self" href="#">Mine Craft</a></li>
+     </ul>
+     <li onclick="ClickMenue2()">Games Points <span id="sp2"><i class="fa-solid fa-chevron-down"></i></span></li>
+     <ul class="ul-3" id="ul3">
+      <li><a target="_self" href="#">GTA Online Add-on</a></li>   
+      <li><a target="_self" href="#">RED DEAD ONLINE Add-on</a></li>   
+      <li><a target="_self" href="#">VALORANT</a></li>   
+      <li><a target="_self" href="#">Fortnite</a></li>   
+      <li><a target="_self" href="#">Roblox</a></li>   
+     </ul>
+     <li><a target="_self" href="#contactUs">Contact us</a></li>
+     <li onclick="ClickMenue3()">Guest#19563 <span id="sp3"><i class="fa-solid fa-chevron-down"></i></span></li>
+     <ul class="ul-4" id="ul4">
+      <li><a target="_self" href="#">Account</a></li>   
+      <li><a target="_self" href="#">Give aways</a></li>   
+      <li><a target="_self" href="#">Help</a></li>   
+      <li><a target="_self" href="#">Support</a></li>   
+      <li><a target="_self" href="#">Donate</a></li>   
+     </ul>
+    </ul>   
+   </div>
+  </nav>
+ <!-- end-nav -->
+ <!-- start-header -->
+ <header>
+    <h2>Hello <span><i class="fa-solid fa-hands-clapping"></i></span></h2>
+    <p class="p-1">Here <span>Steam</span> Games</p>
+    <p class="p-2">Take a look at our top-quality and most economical gaming products. <i class="fa-regular fa-face-smile-wink"></i></p>   
+   </header>
+  <!-- end-header -->
+ 
+  <!-- start-container-header -->
+   <div class="container-header">
+    <!-- Ratings --> 
+    <div class="Ratings">
+     <div class="starts"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+     <p>Total Ratings: <span>1525</span></p> 
+    </div>
+    <!-- btns-container -->
+    <div class="btns-container">
+     <a href="#Main">Get Started</a>
+     <button id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i> <span>Search</span></button>
+    </div>
+    <!-- form -->
+    <form id="Form">
+     <input type="text" placeholder="Search.."> 
+     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+   </div>
+  <!-- end-container-header -->
+
+  <!-- start-main-steam -->
+   <main class="Steam-Games">
+    <!-- game1 --> 
+    <div class="game1">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-one.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Grand Theft Auto V: Premium Edition</p>     
+       <p class="p-2">500 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-one.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game2 --> 
+    <div class="game2">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-2.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">It Takes Two</p>     
+       <p class="p-2">300 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-2.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game3 --> 
+    <div class="game3">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-3.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Red Dead Redemption 2</p>     
+       <p class="p-2">1,500 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-3.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game4 --> 
+    <div class="game4">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-4.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Tom Clancy's Rainbow Six Siege</p>     
+       <p class="p-2">800 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-4.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game5 --> 
+    <div class="game5">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-5.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">For Honor</p>     
+       <p class="p-2">740 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-5.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game6 --> 
+    <div class="game6">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-6.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Rust</p>     
+       <p class="p-2">150 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-6.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game7 --> 
+    <div class="game7">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-7.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Palworld</p>     
+       <p class="p-2">1080 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-7.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game8 --> 
+    <div class="game8">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-8.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Detroit: Become Human</p>     
+       <p class="p-2">1,320 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-8.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game9 --> 
+    <div class="game9">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-9.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Far Cry 6</p>     
+       <p class="p-2">1,620 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-9.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+    <!-- game10 --> 
+    <div class="game10">
+     <span class="rated"><i class="fa-solid fa-heart"></i> <span class="rateMe">0</span></span>   
+     <img src="images/Game-10.jpg" alt="Game-one">
+     <div class="container-text">
+      <!-- first-txt -->
+      <div class="first-txt">
+       <p class="p-1">Gang Beasts</p>     
+       <p class="p-2">600 <span>EGP</span></p>     
+      </div>
+      <!-- second-txt -->
+      <div class="second-txt">
+       <button class="rate"><i class="fa-solid fa-heart"></i></button>
+       <button class="Rotate"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+     </div>
+     <!-- sale-container -->
+     <div class="saleContainer">
+      <div class="top-container">
+       <img src="images/Game-10.jpg" alt="Game-one">
+       <p><span class="price">500</span> <span>EGP</span> (<span class="spBraces">0</span>)</p>   
+      </div>
+      <div class="bottom-container">
+       <button class="decrement">Reset</button>    
+       <button class="back1">Back</button>
+       <button class="SaleBtn"><i class="fa-solid fa-cart-shopping"></i></button>  
+      </div> 
+      <div class="prices-container">
+        <span class="spanPrice">4250 <span class="text">Token</span></span> 
+        <span class="spanPrice">32500 <span class="text">Token</span></span> 
+        <span class="spanPrice">70000 <span class="text">Token</span></span> 
+        <span class="spanPrice">150000 <span class="text">Token</span></span> 
+        <span class="spanPrice">230000 <span class="text">Token</span></span> 
+        <span class="spanPrice">400000 <span class="text">Token</span></span> 
+        <span class="spanPrice">450000 <span class="text">Token</span></span> 
+        <span class="spanPrice">600000 <span class="text">Token</span></span> 
+       </div>  
+     </div>
+    </div>
+   </main>
+  <!-- end-main-steam -->
+
+  <!-- start-contact-us -->
+  <div id="contactUs" class="contact-us">
+    <h5>Contact Us</h5>
+    <p>You can contact me at any time and I will try to help as much as possible. <span><i class="fa-regular fa-face-smile-beam"></i></span></p> 
+    <div class="grid-container">
+     <div class="image-container"></div>
+     <div class="text-container">
+      <!-- left-container -->
+       <div class="left-container">
+        <!-- Messenger --> 
+        <div class="Messenger">
+         <span><i class="fa-brands fa-facebook"></i></span>
+         <a href="https://www.facebook.com/xo.qe51" target="_blank">Facebook</a> 
+        </div>
+        <!-- email -->
+        <div class="email">
+         <span><i class="fa-regular fa-envelope"></i></span>
+         <a href="mailto:ebrahimth599@gmail.com" target="_blank">ebrahimth599@gmail.com</a> 
+        </div>
+       </div> 
+      <!-- right-container --> 
+       <div class="right-container">
+        <!-- Whatsapp -->
+        <div class="Whatsapp">
+         <span><i class="fa-brands fa-whatsapp"></i></span>
+         <a href="https://wa.me/+0201004033746" target="_blank">+0201004033746</a> 
+        </div>
+        <!-- Phone -->
+        <div class="phone">
+         <span><i class="fa-solid fa-mobile-screen-button"></i></span>
+         <a href="tel:01004033746" target="_blank">01004033746</a> 
+        </div>
+       </div>
+     </div>  
+    </div>
+   </div>
+  <!-- end-contact-us -->
+
+   <!-- start-footer -->
+   <footer>
+    <!-- first-container -->
+     <div class="first-container">
+      <!-- left-container -->
+       <div class="left-container">
+        <h6>Ebrahim Thabet's Store</h6> 
+        <ul class="ul-2">
+         <li><span>Phone:</span> <a href="tel:01004033746" target="_blank">01004033746</a></li> 
+         <li><span>Email:</span> <a href="mailto:ebrahimth599@gmail.com" target="_blank">ebrahimth599@gmail.com</a></li> 
+        </ul>
+       </div>
+      <!-- center-container --> 
+       <div class="center-container">
+        <p>Useful  Links</p> 
+        <ul>
+         <li><a target="_self" href="file:///C:/Users/IT/Desktop/project(74)/index.html#"><span><i class="fa-solid fa-angle-right"></i></span>  Home</a></li> 
+         <li><a target="_self" href="#AboutSection"><span><i class="fa-solid fa-angle-right"></i></span>  About</a></li> 
+         <li><a href="#"><a target="_self" href="#contactUs"><span><i class="fa-solid fa-angle-right"></i></span>  Contact US</a></li> 
+        </ul>
+       </div>
+      <!-- right-container -->
+       <div class="right-container"></div> 
+     </div>
+    <!-- last-container -->
+     <div class="last-container">
+      <!-- left-container -->
+       <div class="left-container">
+        <h3>This website was programmed by <span class="sp-1">Mohamed Sayd</span>.</h3> 
+       </div>
+      <!-- right-contaier -->
+       <div class="right-contaier">
+        <a href="https://www.facebook.com/profile.php?id=100071761480205"><i class="fa-brands fa-square-facebook"></i></a> 
+        <a href="https://github.com/Mohamed1-saYed"><i class="fa-brands fa-square-github"></i></a> 
+       </div> 
+     </div>
+   </footer>
+  <!-- end-footer -->
+  <!-- JS-files -->
+  <script src="main.js"></script>
+  <script src="Steam-Games.js"></script>
+</body>
+</html>
+

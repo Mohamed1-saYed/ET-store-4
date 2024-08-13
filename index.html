@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Online Games Store">
+ <meta name="keywords" content="Ebrahim thabet store,Ebrahim thabet,Online Games Store,Online Store,Games Store,STEAM GAMES">
+ <meta name="keywords" content="Pubg mobile,cod mobile,">
+ <meta name="robots" content="index,follow">
+ <meta name="og:description" content="Online Games Store">
+ <meta name="og:keywords" content="Online Games Store,Ebrahim thabet">
+ <meta name="og:url" content="">
+ <meta name="og:image" content="">
+ <meta name="og:title" content="E-T store">
+ <title>ET store</title>
+ <!-- favicon -->
+  <link rel="icon" href="images/fav-icon.png">
+ <!-- css-file -->
+  <link rel="stylesheet" href="main.css">
+ <!-- Font-Awesome-CDN -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- fonts-google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- loader -->
+ <div class="loaderDiv" id="loaderDiv1"> <span id="loader" class="loader">Load&nbsp;ng</span></div> 
+ <!-- ToUp -->  
+  <button id="ToUp"><i class="fa-solid fa-arrow-up"></i></button> 
+ <!-- start-nav -->
+  <nav id="nav">
+   <h1><span>ET</span> Store <span class="sp-2"><img src="images/controller .png" alt="Logo"></span></h1> 
+   <div class="right-container">
+    <button id="btnCart" onclick="ShowCart()" href="#"><i class="fa-solid fa-cart-shopping"></i></button>   
+    <button id="btnNav"><i class="fa-solid fa-bars"></i></button>
+    <button onclick="OpenWishlist()" id="BtnFavorite"><i class="fa-solid fa-heart"></i><span id="spCount">0</span></button>
+    <div id="asidewishlist">
+     <button onclick="CloseWishlist()" id="Closewishlist"><i class="fa-solid fa-xmark"></i></button>   
+     <div id="containerAll"></div>
+    </div> 
+  </div>  
+   <!-- menu -->
+   <div id="Menu" class="menu">
+     <button id="btnMenue"><i class="fa-solid fa-xmark"></i></button>  
+    <ul class="ul-1">
+     <li><a target="_self" href="index.html">Home</a></li>   
+     <li><a target="_self" href="#AboutSection">About</a></li>
+     <li onclick="ClickMenue1()">Games <span id="sp1"><i class="fa-solid fa-chevron-down"></i></span></li>   
+     <ul class="ul-2" id="ul2">
+      <li><a target="_self" href="Steam-Games.html">Steam Games</a></li>
+      <li><a target="_self" href="Steam-Wallet.html">Steam Wallet Codes</a></li>
+      <li><a target="_self" href="#">Mine Craft</a></li>
+     </ul>
+     <li onclick="ClickMenue2()">Games Points <span id="sp2"><i class="fa-solid fa-chevron-down"></i></span></li>
+     <ul class="ul-3" id="ul3">
+      <li><a target="_self" href="#">GTA Online Add-on</a></li>   
+      <li><a target="_self" href="#">RED DEAD ONLINE Add-on</a></li>   
+      <li><a target="_self" href="#">VALORANT</a></li>   
+      <li><a target="_self" href="#">Fortnite</a></li>   
+      <li><a target="_self" href="#">Roblox</a></li>   
+     </ul>
+     <li><a target="_self" href="#contactUs">Contact us</a></li>
+     <li onclick="ClickMenue3()">Guest#19563 <span id="sp3"><i class="fa-solid fa-chevron-down"></i></span></li>
+     <ul class="ul-4" id="ul4">
+      <li><a target="_self" href="#">Account</a></li>   
+      <li><a target="_self" href="#">Give aways</a></li>   
+      <li><a target="_self" href="#">Help</a></li>   
+      <li><a target="_self" href="#">Support</a></li>   
+      <li><a target="_self" href="#">Donate</a></li>   
+     </ul>
+    </ul>   
+   </div>
+  </nav>
+ <!-- end-nav -->
+
+ <!-- start-header -->
+  <header>
+   <h2>Hello <span><i class="fa-solid fa-hands-clapping"></i></span></h2>
+   <p class="p-1">Welcome to <span>ET</span> store</p>
+   <p class="p-2">Take a look at our top-quality and most economical gaming products. <i class="fa-regular fa-face-smile-wink"></i></p>   
+  </header>
+ <!-- end-header -->
+
+ <!-- start-container-header -->
+  <div class="container-header">
+   <!-- Ratings --> 
+   <div class="Ratings">
+    <div class="starts"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+    <p>Total Ratings: <span>5023</span></p> 
+   </div>
+   <!-- btns-container -->
+   <div class="btns-container">
+    <a href="#Main">Get Started</a>
+    <button id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i> <span>Search</span></button>
+   </div>
+   <!-- form -->
+   <form id="Form">
+    <input id="inpSearch" type="text" placeholder="Search.."> 
+    <button id="btnSearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+   </form>
+  </div>
+ <!-- end-container-header -->
+
+ <!-- start-slider-container -->
+  <div id="sliderContainer">
+   <div class="btns">
+    <button id="img1"><i id="i1" class="fa-regular fa-circle-dot"></i></button>
+    <button id="img2"><i id="i2" class="fa-regular fa-circle-dot"></i></button>
+    <button id="img3"><i id="i3" class="fa-regular fa-circle-dot"></i></button>
+    <button id="img4"><i id="i4" class="fa-regular fa-circle-dot"></i></button>
+    <button id="img5"><i id="i5" class="fa-regular fa-circle-dot"></i></button>
+   </div> 
+  </div>
+ <!-- end-slider-container -->
+
+ <!-- start-main -->
+  <main id="Main">
+   <h3>What do we have?</h3> 
+   <!-- box1 --> 
+   <div class="div1 box1">
+    <img src="images/steam-games.jpg" alt="Steam Games">  
+    <div class="container">
+     <a href="Steam-Games.html"><i class="fa-brands fa-steam"></i></a>
+     <p class="pWishlist">Steam Games</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box2 --> 
+   <div class="div2 box2">
+    <img src="images/pubg-mobile-box.jpg" alt="Pubg mobile"> 
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a>
+      <p class="pWishlist">Pubg mobile</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box3 --> 
+   <div class="div3 box3">
+    <img src="images/fortnite-box.jpg" alt="fortnite"> 
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-gamepad"></i></a>
+      <p class="pWishlist">Fortnite</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box4 --> 
+   <div class="div4 box4">
+    <img src="images/Steam-wallet.png" alt="Steam wallet"> 
+    <div class="container">
+      <a href="#"><i class="fa-brands fa-steam"></i></a>
+      <p class="pWishlist">Steam wallet codes</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box5 --> 
+   <div class="div5 box5">
+    <img src="images/gta_pc.jpg" alt="Gta online PC"> 
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-computer"></i></a>
+      <p class="pWishlist">Gta online PC</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box6 --> 
+   <div class="div6 box6">
+    <img src="images/gta_ps.jpg" alt="Gta online PS5"> 
+    <div class="container">
+      <a href=""><i class="fa-brands fa-playstation"></i></a>
+      <p class="pWishlist">Gta online PS5</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box7 --> 
+   <div class="div7 box7">
+    <img src="images/red-dead.jpg" alt="Red Dead online"> 
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-gamepad"></i></a>
+      <p class="pWishlist">Red Dead online</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box8 --> 
+   <div class="div8 box8">
+    <img src="images/roblox.jpg" alt="Roblox"> 
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-box"></i></a>
+      <p class="pWishlist">Roblox</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- box9 --> 
+   <div class="div9 box9">
+    <img src="images/MINE.jpg" alt="Mine craft"> 
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-boxes-stacked"></i></a>
+      <p class="pWishlist">Mine craft</p>
+     <!-- btns-container -->
+     <div class="btns-container">
+      <!-- btns-rated --> 
+      <div class="btns-rated">
+        <button class="Add"><i class="fa-regular fa-heart"></i></button>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+    <!-- box10 --> 
+    <div class="div10 box10">
+      <img src="images/free-fire.jpg" alt="free fire"> 
+      <div class="container">
+        <a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a>
+        <p class="pWishlist">free fire</p>
+       <!-- btns-container -->
+       <div class="btns-container">
+        <!-- btns-rated --> 
+        <div class="btns-rated">
+          <button class="Add"><i class="fa-regular fa-heart"></i></button>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+  </main>
+ <!-- end-main -->
+
+ <!-- start-About-us -->
+  <div id="AboutSection" class="About-us">
+   <div class="text-container">
+    <h4>About us</h4>
+    <p>The value of your efforts lies in the journey, not just the result.</p>  
+   </div>
+   <div class="grid-container">
+    <!-- box-1 -->
+     <div class="box-1">
+      <div class="txt-container">
+       <span><i class="fa-regular fa-handshake"></i></span> 
+       <p class="p-1">Trusted Merchant</p> 
+       <p class="p-2">I practice these services in the largest Facebook groups for Arab and Egyptian players in particular.</p> 
+      </div> 
+     </div> 
+    <!-- box-2 -->
+     <div class="box-2">
+      <div class="txt-container">
+       <span><i class="fa-solid fa-bolt"></i></span> 
+       <p class="p-1">Prompt shipment</p> 
+       <p class="p-2">Fast delivery of your order within 10 minutes at most.</p> 
+      </div> 
+     </div> 
+   </div>
+  </div>
+ <!-- end-About-us -->
+
+ <!-- start-contact-us -->
+  <div id="contactUs" class="contact-us">
+   <h5>Contact Us</h5>
+   <p>You can contact me at any time and I will try to help as much as possible. <span><i class="fa-regular fa-face-smile-beam"></i></span></p> 
+   <div class="grid-container">
+    <div class="image-container"></div>
+    <div class="text-container">
+     <!-- left-container -->
+      <div class="left-container">
+       <!-- Messenger --> 
+       <div class="Messenger">
+        <span><i class="fa-brands fa-facebook"></i></span>
+        <a href="https://www.facebook.com/xo.qe51" target="_blank">Facebook</a> 
+       </div>
+       <!-- email -->
+       <div class="email">
+        <span><i class="fa-regular fa-envelope"></i></span>
+        <a href="mailto:ebrahimth599@gmail.com" target="_blank">ebrahimth599@gmail.com</a> 
+       </div>
+      </div> 
+     <!-- right-container --> 
+      <div class="right-container">
+       <!-- Whatsapp -->
+       <div class="Whatsapp">
+        <span><i class="fa-brands fa-whatsapp"></i></span>
+        <a href="https://wa.me/+0201004033746" target="_blank">+0201004033746</a> 
+       </div>
+       <!-- Phone -->
+       <div class="phone">
+        <span><i class="fa-solid fa-mobile-screen-button"></i></span>
+        <a href="tel:01004033746" target="_blank">01004033746</a> 
+       </div>
+      </div>
+    </div>  
+   </div>
+  </div>
+ <!-- end-contact-us -->
+
+ <!-- start-footer -->
+  <footer id="footer">
+   <!-- first-container -->
+    <div class="first-container">
+     <!-- left-container -->
+      <div class="left-container">
+       <h6>Ebrahim Thabet's Store</h6> 
+       <ul class="ul-2">
+        <li><span>Phone:</span> <a href="tel:01004033746" target="_blank">01004033746</a></li> 
+        <li><span>Email:</span> <a href="mailto:ebrahimth599@gmail.com" target="_blank">ebrahimth599@gmail.com</a></li> 
+       </ul>
+      </div>
+     <!-- center-container --> 
+      <div class="center-container">
+       <p>Useful  Links</p> 
+       <ul>
+        <li><a target="_self" href="file:///C:/Users/IT/Desktop/project(74)/index.html#"><span><i class="fa-solid fa-angle-right"></i></span>  Home</a></li> 
+        <li><a target="_self" href="#AboutSection"><span><i class="fa-solid fa-angle-right"></i></span>  About</a></li> 
+        <li><a href="#"><a target="_self" href="#contactUs"><span><i class="fa-solid fa-angle-right"></i></span>  Contact US</a></li> 
+       </ul>
+      </div>
+     <!-- right-container -->
+      <div class="right-container"></div> 
+    </div>
+   <!-- last-container -->
+    <div class="last-container">
+     <!-- left-container -->
+      <div class="left-container">
+       <h3>This website was programmed by <span class="sp-1">Mohamed Sayd</span>.</h3> 
+      </div>
+     <!-- right-contaier -->
+      <div class="right-contaier">
+       <a href="https://www.facebook.com/profile.php?id=100071761480205"><i class="fa-brands fa-square-facebook"></i></a> 
+       <a href="https://github.com/Mohamed1-saYed"><i class="fa-brands fa-square-github"></i></a> 
+      </div> 
+    </div>
+  </footer>
+ <!-- end-footer -->
+ <!-- JS-file -->
+ <script src="main.js"></script>   
+</body>
+</html>
